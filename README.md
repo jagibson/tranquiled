@@ -5,11 +5,13 @@ TranquiLED is a desktop productivity tool designed to enhance focus and promote 
 Inspired by this [HN post](https://news.ycombinator.com/item?id=38276107)
 ## Features
 
-- **Adjustable Blinking LED**: A screen-corner LED blinks rapidly and then gradually slows down, simulating a heartbeat rhythm.
-- **Customizable Speed**: Users can adjust the initial fast blinking rate and the rate at which it slows down.
-- **Automatic Fade-Out**: After reaching a calm pace, the LED fades away gently, providing a non-intrusive experience.
+- **Heartbeat Rhythm**: A screen-corner LED blinks rapidly and then gradually slows down to 1 blink per second, simulating a calming heartbeat rhythm.
+- **Customizable Speed**: Adjust the initial fast blinking rate, the time it takes to slow down to 1/second, and how long it stays at steady pace before fading out — all from the system tray menu.
+- **Automatic Fade-Out**: After reaching a calm pace and holding it for a configurable duration, the LED fades away gently.
+- **System Tray Controls**: Right-click the tray icon to adjust settings, restart the heartbeat, or quit.
+- **Click-Through Window**: The LED overlay doesn't interfere with clicking on anything beneath it.
 - **Multi-Display Support**: Works across multiple monitors, placing an LED on each screen.
-- **Global Keyboard Shortcut**: Easily toggle the LED on or off with a simple keyboard shortcut.
+- **Global Keyboard Shortcut**: Toggle the LED on or off with `Ctrl+Shift+L`.
 
 ## Getting Started
 
@@ -42,7 +44,21 @@ npm start
 
 ## Usage
 
-After launching TranquiLED, an LED will appear in the corner of your screen(s). It will start with a fast blinking rhythm and gradually slow down to a calmer pace. Use the global keyboard shortcut `Ctrl+Shift+L` (customizable) to toggle the LED on or off.
+After launching TranquiLED, an LED will appear in the bottom-right corner of your screen. It starts blinking fast and gradually slows down to 1 blink per second over the configured slowdown time. After holding at that steady pace, it fades out automatically.
+
+### Tray Menu Settings
+
+Right-click the red dot in your system tray to configure:
+
+| Setting | Options |
+|---------|---------|
+| Initial Blink Rate | 10/sec, 5/sec, 3/sec |
+| Slowdown Time | 30 seconds, 1 minute, 2 minutes, 5 minutes |
+| Steady Time Before Fade | 1 minute, 2 minutes, 5 minutes, Never |
+
+### Keyboard Shortcut
+
+- `Ctrl+Shift+L` — Toggle the LED on or off
 
 ## Contributing
 
